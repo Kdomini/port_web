@@ -1,0 +1,249 @@
+:root {
+   --primary-color: #020202;
+   --primary-color-dark: #741485;
+   --secondary-color: #c9c1c1;
+   --text-dark: #0c0707;
+   --extra-light: #fefdff;
+   --max-width: 1200px;
+}
+
+* {
+   padding: 0;
+   margin: 2;
+   box-sizing: border-box;
+}
+
+a {
+   text-decoration: none;
+}
+
+body {
+       font-family: 'Poppins', sans-serif;
+       background-color: #a177b3;
+}
+
+nav {
+   width: 100%;
+   position: inherit;
+   top: 0;
+   left: 0;
+   background-color: #e98fd8;
+   z-index: 99;
+}
+
+.nav__content {
+   max-width: var(--max-width);
+   margin: auto;
+   padding: 1.5em 1rem;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+nav .logo a {
+   font-size: 1.8rem;
+   font-weight: 600;
+   color: var(--primary-color);
+   transition: 0.5s;
+}
+
+nav .logo a:hover {
+   color: var(--primary-color);
+}
+
+nav .checkbox {
+   display: none;
+}
+
+nav input {
+   display: none;
+}
+
+nav .checkbox i {
+   font-size: 2rem;
+   color: var(--primary-color);
+   cursor: pointer;
+}
+
+ul {
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+   list-style: none;
+   transition: left 0.3;
+}
+
+ul li a {
+   padding: 2rem 1rem;
+   border: 2px solid transparent;
+   text-decoration: none;
+   font-weight: 600;
+   color: var(--text-dark);
+   transition: 0.3s;
+}
+
+ul li a:hover {
+   border-top-color: #2a192c;
+   border-bottom-color: #5f066d;
+   color: var(--primary-color-dark);
+}
+
+.section {
+   padding: 5rem 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.section__container {
+   display: flex;
+   justify-content: space-between;
+   max-width: var(--max-width);
+   margin: auto;
+   gap: 2rem;
+}
+
+.content {
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;  
+   text-align: center;  
+   padding: 20px;
+   gap: 20px;
+}
+
+.title {
+   font-size: 2rem;
+   font-weight: 600;
+   line-height: 4rem; 
+   color: var(--primary-color);
+   margin-bottom: 1rem;
+}
+.title span{
+   font-weight: 600;
+}
+.description {
+   line-height: 1.8rem;
+   color: var(--extra-light); 
+   margin-top: 1rem; 
+}
+
+.projects {
+   max-width: var(--max-width);
+   margin: auto;
+   padding: 2rem;
+   text-align: center;
+}
+
+.projects h2 {
+   font-size: 20px;
+   margin-bottom: 1.5rem;
+   font-weight: 600;
+   color: var(--primary-color-dark);
+}
+
+.projects__container {
+   display: flex;
+   justify-content: space-between;
+   gap: 1.5rem;
+   flex-wrap: wrap;
+}
+
+.action__btns {
+   display: flex;
+   gap: 1rem;
+   justify-content: center;
+   margin-top: 2em;
+}
+
+.action__btns button {
+   font-size: 1rem;
+   font-weight: 600;
+   letter-spacing: 2px;
+   padding: 1rem 2rem;
+   outline: none;
+   border: 2px solid var(--primary-color-dark);
+   border-radius: 10px;
+   background-color: transparent;
+   color: var(--primary-color-dark);
+   transition: 0.3s;
+   cursor: pointer;
+}
+
+.action__btns button:hover {
+   background-color: var(--primary-color-dark);
+   color: #fff;
+}
+
+.project-card {
+   background-color: #ffffff;
+   padding: 2rem;
+   width: 30%;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   transition: 0.3s ease-in-out;
+   text-align: center;
+}
+
+.project-card:hover {
+   transform: translateY(-10px);
+   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+   font-size: 20px;
+   color: var(--primary-color-dark);
+   margin-bottom: 1rem;
+}
+.projects p{
+   font-size: 25px
+   }
+.project-card p {
+   font-size: 20px;
+   color: var(--text-dark);
+   line-height: 1.5rem;
+}
+
+footer {
+   text-align: center;
+   padding: 2rem 0;
+   background-color: #610c70;
+   color: #fff;
+}
+
+footer ul {
+   list-style: none;
+   display: flex;
+   justify-content: center;
+   gap: 2rem;
+}
+
+footer ul li a {
+   color: #fff;
+   font-weight: 600;
+   text-decoration: none;
+}
+
+footer ul li a:hover {
+   color: var(--primary-color);
+}
+
+
+ 
+
+@media (max-width: 768px) {
+   .section__container {
+       flex-direction: column;
+   }
+
+   .projects__container {
+       flex-direction: column;
+       gap: 2rem;
+   }
+
+   .project-card {
+       width: 100%;
+   }
+}
